@@ -102,6 +102,22 @@ footer a {
   display: flex;
   gap: 0 30px;
 }
+.text-trio p {
+  position: relative;
+}
+.text-trio p::before {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  height: 18px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  right: -16px;
+}
+.text-trio p:last-child::after {
+  display: none;
+}
 
 @media (max-width: 700px) {
   .text-trio {
@@ -112,6 +128,7 @@ footer .row {
   position: relative;
 }
 .back-to-top {
+.back-to-top {
   font-size: 1.8rem;
   line-height: 1.8em;
   width: 2em;
@@ -121,7 +138,7 @@ footer .row {
   position: absolute;
   top: -1em;
   right: -0.7em;
-  background-color: #eb1e61;
+  background-color: var(--color-secondary);
   text-align: center;
-  box-shadow: 0 0.2em 0.4em #0006;
+  box-shadow: var(--shadow);
 }
